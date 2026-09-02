@@ -2,6 +2,9 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import './App.css'
 import Header from "./Components/Header.jsx"
+import ToolBar from "./Components/ToolBar.jsx"
+import EmptyShelf from './Components/EmptyShelf.jsx'
+import AddBookButton from './Components/AddBookButton.jsx'
 import Booklist from "./Components/Booklist.jsx"
 import AddBook from "./Components/AddBook.jsx"
 
@@ -59,8 +62,9 @@ function App() {
   return (
     <>
       <Header />
-      <AddBook addBook={addBook} />
-      <Booklist books={books} />
+      <ToolBar />
+      <EmptyShelf />
+      <AddBookButton />
     </>
     
   );

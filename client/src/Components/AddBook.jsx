@@ -12,7 +12,7 @@ function AddBook({addBook}) {
             author: author,
             status: "want_to_read"
         };
-        addBook(newBook);   
+        addBook(newBook);       
     }
 
 
