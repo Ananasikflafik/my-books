@@ -6,6 +6,7 @@ const router = express.Router();
 router.get("/", (req, res) => {
     const books = db.prepare(`
         SELECT * FROM books`).all();
+    
     res.json(books);
 });
 
