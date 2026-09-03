@@ -35,6 +35,7 @@ body {
   box-sizing: border-box;
 }
 
+/* ---Header--- */
 #main-header {
   padding: 44px 32px 20px;
   max-width: 1180px;
@@ -47,11 +48,12 @@ h1 {
   font-size: 40px;
   margin: 0;
   margin-bottom: 4px;
+  font-size: clamp(32px, 5vw, 52px);
 }
 .eyebrow {
   font-family: var(--font-mono);
   margin: 0;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   text-transform: uppercase;
   font-size: 12px;
   color: var(--gold-soft);
@@ -63,4 +65,136 @@ h1 {
   font-size: 15px;
   color: var(--cream-muted);
   opacity: 0.85;
+}
+
+/* ---ToolBar--- */
+#main-toolbar {
+  max-width: 1180px;
+  margin: 26px auto 0;
+  padding: 0 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-bar {
+  background-color: var(--bg-top);
+  display: flex;
+  padding: 10px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(198, 161, 91, 0.35);
+  position: relative;
+  flex: 1 1 260px;
+  min-width: 220px;
+}
+
+.search-bar input {
+  font-family: var(--font-body);
+  width: 100%;
+  outline: none;
+  font-size: 14px;
+  background: transparent;
+  border: transparent;
+  padding-left: 10px;
+  color: var(--cream-muted);
+}
+
+.search-bar input::placeholder {
+  color: var(--cream-muted);
+  opacity: 0.85;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+}
+
+.filters button {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.03em;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(198, 161, 91, 0.35);
+  background: transparent;
+  color: var(--cream-muted);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+/*---Main---*/
+
+main {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 34px 32px 140px;
+}
+
+/* ---Empty Shelf--- */
+#empty-shelf {
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon {
+  font-size: 45px;
+  padding-bottom: 15px;
+}
+
+.empty-shelf-title {
+  color: var(--gold-soft);
+  margin: 0;
+}
+
+.empty-shelf-btn {
+  padding: 12px 15px;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+  font-family: var(--font-mono);
+
+  background-color: var(--wine);
+  color: var(--paper);
+  border: transparent;
+  border-radius: 5px;
+}
+
+.empty-describtion {
+  font-size: 14px;
+  color: var(--cream-muted);
+  max-width: 360px;
+  text-align: center;
+  opacity: 80%;
+}
+
+/* ---Add button--- */
+#add-btn {
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--gold);
+  color: var(--ink);
+  border: none;
+  border-radius: 999px;
+  padding: 14px 20px 14px 16px;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 13px;
+  box-shadow: 0 10px 22px -6px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  transition:
+    transform 0.15s,
+    box-shadow 0.15s;
+  z-index: 20;
+}
+
+#add-btn svg {
+  width: 18px;
+  height: 18px;
 }

@@ -63,7 +63,9 @@ function App() {
     <>
       <Header />
       <ToolBar />
-      <EmptyShelf />
+      <main>
+        <EmptyShelf />
+      </main>
       <AddBookButton />
     </>
     
